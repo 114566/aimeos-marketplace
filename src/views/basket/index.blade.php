@@ -9,7 +9,6 @@
     <?= $aiheader['basket/standard'] ?? '' ?>
     <?= $aiheader['basket/related'] ?? '' ?>
 @stop
-
 @section('aimeos_head_nav')
     <?= $aibody['catalog/tree'] ?? '' ?>
 @stop
