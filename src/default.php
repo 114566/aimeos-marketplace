@@ -6,16 +6,13 @@ switch( config( 'database.default', 'mysql' ) ) {
 	default: $aimeosIndexManagerName = 'MySQL';
 }
 
-
 return [
-
 	'apc_enabled' => false,
 	'apc_prefix' => 'laravel:',
 	'extdir' => base_path( 'ext' ),
 	'pcntl_max' => 4,
 	'pcntl_priority' => 19,
 	'uploaddir' => '/',
-
 	'page' => [
 		'account-index' => ['locale/select', 'basket/mini', 'catalog/tree', 'catalog/search', 'account/profile', 'account/review', 'account/subscription', 'account/basket', 'account/history', 'account/favorite', 'account/watch', 'catalog/session'],
 		'basket-index' => ['locale/select', 'catalog/tree', 'catalog/search', 'basket/standard', 'basket/bulk', 'basket/related'],

@@ -6,7 +6,6 @@
  * @package laravel
  */
 
-
 if( !function_exists( 'airoute' ) )
 {
 	/**
@@ -22,12 +21,10 @@ if( !function_exists( 'airoute' ) )
 		if( $current = Route::current() )
 		{
 			$site = config( 'app.shop_multishop' ) ? config( 'shop.mshop.locale.site', 'default' ) : null;
-
 			$parameters['site'] ??= $current->parameter( 'site', Request::get( 'site', $site ) );
 			$parameters['locale'] ??= $current->parameter( 'locale', Request::get( 'locale' ) );
 			$parameters['currency'] ??= $current->parameter( 'currency', Request::get( 'currency' ) );
 		}
-
 		return app( 'url' )->route( $name, array_filter( $parameters ), $absolute );
 	}
 }
@@ -48,7 +45,6 @@ if( !function_exists( 'aiconfig' ) )
 	}
 }
 
-
 if( !function_exists( 'aitrans' ) )
 {
 	/**
@@ -63,11 +59,9 @@ if( !function_exists( 'aitrans' ) )
 	function aitrans( $singular, array $params = array(), $domain = 'client', $locale = null )
 	{
 		$i18n = app( 'aimeos.context' )->get()->i18n( $locale );
-
 		return vsprintf( $i18n->dt( $domain, $singular ), $params );
 	}
 }
-
 
 if( !function_exists( 'aitransplural' ) )
 {
