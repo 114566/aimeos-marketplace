@@ -5,7 +5,6 @@ switch( config( 'database.default', 'mysql' ) ) {
 	case 'sqlsrv': $aimeosIndexManagerName = 'SQLSrv'; break;
 	default: $aimeosIndexManagerName = 'MySQL';
 }
-
 return [
 	'apc_enabled' => false,
 	'apc_prefix' => 'laravel:',
