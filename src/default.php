@@ -1,5 +1,4 @@
 <?php
-
 switch( config( 'database.default', 'mysql' ) ) {
 	case 'pgsql': $aimeosIndexManagerName = 'PgSQL'; break;
 	case 'sqlsrv': $aimeosIndexManagerName = 'SQLSrv'; break;
